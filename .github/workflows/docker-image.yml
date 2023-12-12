@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
+      
       run: docker build . --file Dockerfile --tag frontend/littleconan:$(date +%s)
    
     - name: Login to DockerHub
@@ -22,7 +23,7 @@ jobs:
       with:
         username: ${{secrets.DOCKERHUB_USERNAME}}
         password: ${{secrets.DOCKERHUB_TOKEN}}
-
+        build_args: REACT_APP_HOST_URL=http://192.168.56.1:8080/api
     - name: build and release to DockerHub
       env:
         NAME: littleconan
