@@ -12,7 +12,7 @@ function About() {
   return (
     <div >
       <h1> This is About {message} </h1>
-      <button type="button" onClick={onClickEnter} >주문</button>
+      <button type="button" onClick={onClickEnter} >주문을하세요</button>
     </div>
   );
 }
