@@ -1,5 +1,6 @@
 FROM node:18-alpine3.16 as build
 
+
 # Configure the main working directory inside the docker image. 
 # This is the base directory used in any further RUN, COPY, and ENTRYPOINT 
 # commands.
@@ -17,7 +18,7 @@ COPY . ./
 
 # Arguments
 ARG REACT_APP_HOST_URL
-ENV REACT_APP_HOST_URL=${REACT_APP_HOST_URL}
+ENV REACT_APP_HOST_URL=http://192.168.56.1:8080
 
 # Build the application
 RUN npm run build
