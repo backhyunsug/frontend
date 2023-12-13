@@ -18,8 +18,8 @@ COPY . ./
 
 # Arguments
 ARG REACT_APP_HOST_URL
-ENV REACT_APP_HOST_URL=http://192.168.56.1:8080
-
+#ENV REACT_APP_HOST_URL=http://192.168.56.1:8080
+ENV REACT_APP_HOST_URL=http://54.166.239.195:8080
 # Build the application
 RUN npm run build
 
