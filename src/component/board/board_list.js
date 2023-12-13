@@ -58,7 +58,7 @@ function BoardList( ){
       
       return (
         <div>
-          <h3 align="center">게시판 목록(수정)</h3>
+          <h3 align="center">***** 게시판 목록(수정)  ******</h3>
           <table className="table table-striped" style={{ marginTop: 20 }}>
             <colgroup>
               <col width="8%"/>
